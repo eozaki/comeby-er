@@ -13,9 +13,14 @@
  *= require_tree .
  *= require_self
  */
-@import 'bootstrap_and_overrides'
+@import 'bootstrap_and_overrides';
+
+.container {
+}
 
 .layout-banner {
-  color: #FFA500;
+  background: lightblue;
+  color: white;
+  font-weight: bold;
 }
 
