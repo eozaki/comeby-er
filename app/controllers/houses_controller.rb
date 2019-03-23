@@ -1,11 +1,12 @@
 class HousesController < ApplicationController
-  before_action :validate_permission_to_create, only: [:new, :create]
+  # before_action :validate_permission_to_create, only: [:new, :create]
 
   def index
     @houses = House.all
   end
 
   def new
+    @house = House.new
   end
 
   private
