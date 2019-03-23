@@ -1,37 +1,37 @@
 require 'rails_helper'
 
-RSpec.describe 'Routes for buyers', type: :routing do
-  describe 'devise_for :buyers' do
+RSpec.describe 'Routes for admins', type: :routing do
+  describe 'devise_for :admins' do
     it do
-      expect(post '/users/sign_in').to route_to(
+      expect(post '/admins/sign_in').to route_to(
         controller: 'devise/sessions',
         action:     'create'
       )
-      expect(get '/users/sign_in').to route_to(
+      expect(get '/admins/sign_in').to route_to(
         controller: 'devise/sessions',
         action:     'new'
       )
-      expect(delete '/users/sign_out').to route_to(
+      expect(delete '/admins/sign_out').to route_to(
         controller: 'devise/sessions',
         action:     'destroy',
       )
-      expect(get '/users/password/new').to route_to(
+      expect(get '/admins/password/new').to route_to(
         controller: 'devise/passwords',
         action:     'new'
       )
-      expect(get '/users/password/edit').to route_to(
+      expect(get '/admins/password/edit').to route_to(
         controller: 'devise/passwords',
         action:     'edit'
       )
-      expect(get '/users/sign_up').to route_to(
+      expect(get '/admins/sign_up').to route_to(
         controller: 'devise/registrations',
         action:     'new'
       )
-      expect(put '/users').to route_to(
+      expect(put '/admins').to route_to(
         controller: 'devise/registrations',
         action:     'update'
       )
-      expect(patch '/users').to route_to(
+      expect(patch '/admins').to route_to(
         controller: 'devise/registrations',
         action:     'update'
       )
