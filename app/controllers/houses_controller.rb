@@ -9,6 +9,12 @@ class HousesController < ApplicationController
     @house = House.new
   end
 
+  def create
+    House.create!(params[:house])
+  rescue
+    redirect_to agents_houses_path, alert: 'Somethng wen wrong when creating the house! Try again, please.'
+  end
+
   private
 
   def validate_permission_to_create
