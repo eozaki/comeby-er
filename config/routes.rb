@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :buyers, path: 'users'
   devise_for :admins
   
-  resources :admins do
+  resources :agents, only: [] do
     collection do
-      resources :houses
+      resources :houses, as: :agents_houses
     end
   end
 
