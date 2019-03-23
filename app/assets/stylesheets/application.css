@@ -15,7 +15,8 @@
  */
 @import 'bootstrap_and_overrides';
 
-.container {
+.body {
+  margin-top: 20px;
 }
 
 .layout-banner {
