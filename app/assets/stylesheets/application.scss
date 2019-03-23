@@ -4,6 +4,11 @@
   margin-top: 20px;
 }
 
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
 .layout-banner {
   background: lightblue;
   color: white;
